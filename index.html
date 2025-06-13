@@ -2,11 +2,38 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>나의 첫 GitHub Pages</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>김서윤의 인생 일대기</h1>
-  <p>여기에 당신의 포트폴리오나 소개를 작성할 수 있습니다.</p>
+
+  <!-- Header with Pattern BG -->
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <h1 class="hero__title">Obskura’s Space</h1>
+    <p class="hero__subtitle">Frontend Developer & Designer</p>
+  </header>
+
+  <!-- Projects (Card Grid) -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects__grid">
+      <!-- 예시 카드 -->
+      <article class="project-card">
+        <img src="assets/images/proj1-thumb.jpg" alt="Project A thumbnail" class="project-card__img">
+        <div class="project-card__body">
+          <h3 class="project-card__title">Project A</h3>
+          <p class="project-card__desc">React + Tailwind로 만든 블로그 테마</p>
+        </div>
+      </article>
+      <!-- …반복 -->
+    </div>
+  </section>
+
+  <!-- 나머지 섹션 동일 -->
+  <script src="js/main.js"></script>
 </body>
 </html>
