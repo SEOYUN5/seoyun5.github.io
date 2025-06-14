@@ -52,16 +52,23 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-const langToggleBtn = document.getElementById('lang-toggle');
+    // ============================
+    // Language Toggle (EN/KO)
+    // ============================
+    const langToggleBtn = document.getElementById('lang-toggle');
     if (langToggleBtn) {
         langToggleBtn.addEventListener('click', () => {
             const showingKo = langToggleBtn.dataset.lang === 'ko';
             document.querySelectorAll('.lang-ko')
-                .forEach(el => el.style.display = showingKo ? 'none' : 'inline');
+                    .forEach(el => el.style.display = showingKo ? 'none' : 'inline');
             document.querySelectorAll('.lang-en')
-                .forEach(el => el.style.display = showingKo ? 'inline' : 'none');
-            //표시//
+                    .forEach(el => el.style.display = showingKo ? 'inline' : 'none');
             langToggleBtn.dataset.lang = showingKo ? 'en' : 'ko';
             langToggleBtn.textContent     = showingKo ? 'KO' : 'EN';
         });
     }
+    const emailBtn = document.getElementById('email-btn');
+    if (emailBtn) {
+        new bootstrap.Popover(emailBtn);
+    }
+
