@@ -52,3 +52,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+const langToggleBtn = document.getElementById('lang-toggle');
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', () => {
+            const showingKo = langToggleBtn.dataset.lang === 'ko';
+            document.querySelectorAll('.lang-ko')
+                .forEach(el => el.style.display = showingKo ? 'none' : 'inline');
+            document.querySelectorAll('.lang-en')
+                .forEach(el => el.style.display = showingKo ? 'inline' : 'none');
+            //표시//
+            langToggleBtn.dataset.lang = showingKo ? 'en' : 'ko';
+            langToggleBtn.textContent     = showingKo ? 'KO' : 'EN';
+        });
+    }
