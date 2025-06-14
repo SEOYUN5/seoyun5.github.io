@@ -59,12 +59,10 @@ window.addEventListener('DOMContentLoaded', event => {
     if (langToggleBtn) {
         langToggleBtn.addEventListener('click', () => {
             const showingKo = langToggleBtn.dataset.lang === 'ko';
-            document.querySelectorAll('.lang-ko')
-                    .forEach(el => el.style.display = showingKo ? 'none' : 'inline');
-            document.querySelectorAll('.lang-en')
-                    .forEach(el => el.style.display = showingKo ? 'inline' : 'none');
+            document.querySelectorAll('.lang-ko').forEach(el => el.style.display = showingKo ? 'none' : 'inline');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = showingKo ? 'inline' : 'none');
             langToggleBtn.dataset.lang = showingKo ? 'en' : 'ko';
-            langToggleBtn.textContent     = showingKo ? 'KO' : 'EN';
+            langToggleBtn.textContent = showingKo ? 'KO' : 'EN';
         });
     }
     const emailBtn = document.getElementById('email-btn');
