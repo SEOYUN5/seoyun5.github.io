@@ -22,6 +22,24 @@
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
 <div class="container">
 <a class="navbar-brand" href="#page-top">김서윤 페이지</a>
+ <!-- 언어 토글 버튼 추가 -->
+  <button id="lang-toggle"
+         class="btn btn-sm btn-outline-light ms-3"
+         data-lang="ko"
+         type="button"
+         title="EN으로 보기">
+    EN
+
+  </button>
+    <!-- 기존 토글버튼 -->
+    <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      Menu <i class="fas fa-bars"></i>
+    </button>
 <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" data-bs-target="#navbarResponsive" data-bs-toggle="collapse" type="button">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -206,7 +224,16 @@
 <!-- Portfolio Modal - Image-->
 <img alt="..." class="img-fluid rounded mb-5" src="assets/img/portfolio/portfolio.png"/>
 <!-- Portfolio Modal - Text-->
-<p class="mb-4">Freelancer 테마를 활용하여 GitHub Pages로 배포한 자기소개용 포트폴리오 웹사이트입니다. HTML, CSS 기반으로 제작되었으며, 테마 커스터마이징을 통해 본인의 정보로 구성하였습니다.</p>
+<p class="mb-4">
+  <span class="lang-ko">
+    Freelancer 테마를 활용하여 GitHub Pages로 배포한 자기소개용 포트폴리오 웹사이트입니다.
+    HTML, CSS 기반으로 제작되었으며, 테마 커스터마이징을 통해 본인의 정보로 구성하였습니다.
+  </span>
+  <span class="lang-en" style="display:none">
+    A personal portfolio website built using the Freelancer theme and deployed on GitHub Pages.
+    It’s based on HTML and CSS, fully customized with my own information.
+  </span>
+</p>
 <button class="btn btn-primary" data-bs-dismiss="modal">
 <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -238,7 +265,16 @@
 <!-- Portfolio Modal - Image-->
 <img alt="..." class="img-fluid rounded mb-5" src="assets/img/portfolio/chat.png"/>
 <!-- Portfolio Modal - Text-->
-<p class="mb-4">Python 소켓 프로그래밍을 이용한 채팅 서버 구현 프로젝트입니다. 닉네임 설정, 접속자 목록, 브로드캐스트 기능 등을 포함할 예정입니다.</p>
+<p class="mb-4">
+<span class="lang-ko">
+Python 소켓 프로그래밍을 이용한 채팅 서버 구현 프로젝트입니다.
+닉네임 설정, 접속자 목록, 브로드캐스트 기능 등을 포함할 예정입니다.
+</span>
+<span class="lang-en" style="display:none">
+A chat server project implemented using Python socket programming,
+featuring nickname setup, user list display, and broadcast functionality.
+</span>
+</p>
 <button class="btn btn-primary" data-bs-dismiss="modal">
 <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -270,7 +306,14 @@
 <!-- Portfolio Modal - Image-->
 <img alt="..." class="img-fluid rounded mb-5" src="assets/img/portfolio/login.png"/>
 <!-- Portfolio Modal - Text-->
-<p class="mb-4">사용자 인증 기능이 포함된 로그인 시스템으로, HTML과 JavaScript를 활용하여 프론트엔드를 구성하고, LocalStorage를 활용한 로그인 상태 유지 기능을 구현할 예정입니다.</p>
+<p class="mb-4">
+<span class="lang-ko">
+사용자 인증 기능이 포함된 로그인 시스템으로, HTML과 JavaScript를 활용하여 프론트엔드를 구성하고, LocalStorage를 활용한 로그인 상태 유지 기능을 구현할 예정입니다.
+</span>
+<span class="lang-en" style="display:none">
+An authentication-based login system built with HTML and JavaScript, featuring a front-end design and login state persistence using LocalStorage.
+</span>
+</p>
 <button class="btn btn-primary" data-bs-dismiss="modal">
 <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -302,7 +345,15 @@
 <!-- Portfolio Modal - Image-->
 <img alt="..." class="img-fluid rounded mb-5" src="assets/img/portfolio/shop.png"/>
 <!-- Portfolio Modal - Text-->
-<p class="mb-4">쇼핑몰 백엔드 서버를 구성하기 위한 프로젝트로, 상품 목록 조회, 장바구니, 주문 처리 등의 기능을 설계하고 Java 또는 Python으로 구현할 계획입니다.</p>
+<p class="mb-4">
+<span class="lang-ko">
+쇼핑몰 백엔드 서버를 구성하기 위한 프로젝트로, 상품 목록 조회, 장바구니, 주문 처리 등의 기능을 설계하고 Java 또는 Python으로 구현할 계획입니다.
+</span>
+<span class="lang-en" style="display:none">
+A project to set up the backend server for an online shop, planning to implement features like product listing, shopping cart, and order processing using Java or Python.
+</span>
+</p>
+<button class="btn btn-primary" data-bs-dismiss="modal">
 <button class="btn btn-primary" data-bs-dismiss="modal">
 <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -334,7 +385,18 @@
 <!-- Portfolio Modal - Image-->
 <img alt="..." class="img-fluid rounded mb-5" src="assets/img/portfolio/cloud.png"/>
 <!-- Portfolio Modal - Text-->
-<p class="mb-4">클라우드 업로드 기능을 프론트엔드 형태로 구현할 예정입니다. HTML과 JS를 활용하여 간단한 업로드 인터페이스를 만들고, 시나리오 기반으로 작동하도록 구성할 계획입니다.</p>
+<p class="mb-4">
+<span class="lang-ko">
+클라우드 업로드 기능을 프론트엔드 형태로 구현할 예정입니다.
+HTML과 JavaScript를 활용하여 간단한 업로드 인터페이스를 만들고,
+시나리오 기반으로 작동하도록 구성할 계획입니다.
+</span>
+<span class="lang-en" style="display:none">
+A front-end implementation of cloud upload functionality.
+Using HTML and JavaScript, it creates a simple upload interface
+configured to operate based on specific scenarios.
+</span>
+</p>
 <button class="btn btn-primary" data-bs-dismiss="modal">
 <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -366,7 +428,16 @@
 <!-- Portfolio Modal - Image-->
 <img alt="..." class="img-fluid rounded mb-5" src="assets/img/portfolio/database.png"/>
 <!-- Portfolio Modal - Text-->
-<p class="mb-4">C와 데이터 저장 또는 외부 DB 연동 기능을 포함하는 시나리오를 기반으로 구현할 예정입니다. 추후 백엔드 서버와 연동하여 데이터 CRUD 기능을 개발할 예정입니다.</p>
+ <p class="mb-4">
+<span class="lang-ko">
+C와 데이터 저장 또는 외부 DB 연동 기능을 포함하는 시나리오 기반 프로젝트입니다.
+추후 백엔드 서버와 연동하여 데이터 CRUD 기능을 개발할 예정입니다.
+</span>
+<span class="lang-en" style="display:none">
+A scenario-based project including data storage in C or integration with an external database.
+Future plans include developing CRUD functionality by connecting with a backend server.
+</span>
+</p>
 <button class="btn btn-primary" data-bs-dismiss="modal">
 <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
