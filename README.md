@@ -39,13 +39,13 @@ HTML/JavaScript로 구현하는 클라우드 업로드 인터페이스
 HTML: 내비게이션 바 섹션 (<nav id="mainNav">)에 위치한 <button id="lang-toggle">  
 JS: window.addEventListener('DOMContentLoaded', ...) 콜백 내부 하단  
 코드 설명: 코드 설명: 클릭 이벤트 발생 시 .lang-ko와 .lang-en 클래스를 가진 요소들을 선택하여 style.display 속성을 전환하도록 구현하였습니다.  
-
-3. 추천 노래 버튼. 추천 노래 버튼  
+  
+2. 추천 노래 버튼. 추천 노래 버튼  
 설명: "추천 노래!" 버튼 클릭 시 유튜브 재생 목록을 새 탭으로 엽니다.  
 코드 위치:  
 HTML: About 섹션(<section id="about">) 내 .text-center 영역에 위치한 <a class="btn btn-outline-light btn-lg" ...>  
 코드 설명: <a> 태그에 href="https://www.youtube.com/watch?v=...", target="_blank", rel="noopener", title="Go to Recommended Song" 속성을 설정하여 새 탭으로 안전하게 이동하도록 구현하였습니다.  
-
+  
 4. 이메일 팝오버
 설명: 이메일 아이콘 클릭 시 말풍선 형태의 팝오버로 이메일 주소를 표시합니다.
 코드 위치:  
