@@ -7,7 +7,7 @@ GitHub Repository: https://github.com/SEOYUN5/seoyun5.github.io
 테마: Start Bootstrap의 Freelancer 테마 (https://startbootstrap.com/theme/freelancer)  
   
 나의 스킬  
-C, Java, JavaScript, CSS, Git, SQL, Rust: 학습 중  
+C, Java, JavaScript, CSS, Git, SQL, Rust: 학습 중    
   
 프로젝트 (5개)  
 1.개인 포트폴리오 웹사이트 (완료)  
