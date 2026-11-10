@@ -258,24 +258,39 @@
 <div class="divider-custom-line"></div>
 </div>
 <!-- Portfolio Modal - Image-->
-<img alt="라스트 캐스터 콘셉트 이미지" class="img-fluid rounded mb-5" loading="lazy" src="assets/img/portfolio/last-caster.jpg"/>
+<img alt="라스트 캐스터 실제 타이틀 화면" class="img-fluid rounded mb-5" loading="lazy" src="assets/img/portfolio/last-caster-lobby.png"/>
 <!-- Portfolio Modal - Text-->
 <p class="mb-4">
   <span class="lang-ko">
     아이작의 로그라이크 요소와 뱀서류의 전투 방식을 참고해 만든 2D 게임입니다.
-    플레이할 때마다 다른 상황이 나오도록 랜덤 요소를 넣었고, 시스템 설계부터 빌드까지 개발 과정을 주도했습니다.<br/><br/>
-    <strong>사용 기술:</strong> Unity 2D, C#, Animator, 2D Physics<br/>
-    <strong>구현 방법:</strong> 캐릭터 이동과 전투, 적의 등장, 게임 진행을 각각 C# 스크립트로 나누었습니다. 랜덤 요소는 한 판마다 전투와 성장 흐름이 달라지도록 구성하고, 여러 번 플레이하면서 난이도와 진행 속도를 조정했습니다.<br/><br/>
+    플레이할 때마다 전투와 성장 순서가 달라지도록 방과 스킬에 무작위 요소를 넣었습니다. 시스템 설계부터 Windows·macOS 빌드까지 개발 과정을 주도했습니다.<br/><br/>
+    <strong>사용 기술:</strong> Unity 6, C#, URP 2D, 2D Physics, Animator, TextMeshPro<br/>
+    <strong>구현 방법:</strong> 공격 범위 안의 적을 찾고 거리를 비교해 가장 가까운 적을 자동으로 조준합니다. 레벨이 오르면 일곱 가지 스킬을 섞어 중복되지 않는 선택지 세 개를 보여 주고, 선택하는 동안에는 게임 시간을 멈춥니다. 방은 일반·보물·고난도로 나눴으며 전투가 끝나면 서로 다른 다음 방으로 이어지는 포탈을 생성합니다.<br/><br/>
+    <strong>문제와 선택:</strong> 이동과 조준을 동시에 하면 회피에 집중하기 어려웠습니다. 공격을 자동화하고 애니메이션의 발사 시점은 코루틴으로 맞춰, 플레이어가 이동과 성장 선택에 집중하도록 만들었습니다.<br/><br/>
+    <strong>아쉬운 점:</strong> 현재는 공격할 때마다 <code>OverlapCircleAll</code>로 적 목록을 만들고 투사체도 <code>Instantiate</code>합니다. 적과 투사체가 많아지면 할당 비용이 커질 수 있어, 이후에는 비할당 탐색과 오브젝트 풀을 적용할 계획입니다.<br/><br/>
     2026년 5월 스마일게이트 인디고(IndieGo) 밋업에 전시해 현장 피드백을 받았습니다. 공모전에도 출품했지만 수상하지는 못했습니다.
   </span>
   <span class="lang-en" style="display:none">
     A 2D game inspired by Isaac-style roguelike elements and survivor-like combat.
-    I led the work from system design through the playable build and added random elements so each run presents different situations.<br/><br/>
-    <strong>Tech stack:</strong> Unity 2D, C#, Animator, 2D Physics<br/>
-    <strong>Implementation:</strong> Character movement and combat, enemy spawning, and game progression were separated into C# scripts. Random elements change the combat and progression flow between runs, and repeated playtests were used to tune difficulty and pacing.<br/><br/>
+    Rooms and skills use randomized elements so combat and progression unfold differently in each run. I led development from system design through Windows and macOS builds.<br/><br/>
+    <strong>Tech stack:</strong> Unity 6, C#, URP 2D, 2D Physics, Animator, TextMeshPro<br/>
+    <strong>Implementation:</strong> Enemies inside the attack radius are compared by distance and the nearest target is selected automatically. On level-up, seven skills are shuffled into three unique choices while game time is paused. Rooms are divided into normal, treasure, and hard types, and clearing combat creates portals leading to different room types.<br/><br/>
+    <strong>Problem and choice:</strong> Aiming while moving made it difficult to focus on dodging. Attacks were automated, while a coroutine synchronizes projectile timing with the attack animation.<br/><br/>
+    <strong>Limitation:</strong> Each attack currently uses <code>OverlapCircleAll</code> and creates projectiles with <code>Instantiate</code>. Non-allocating physics queries and object pooling are planned to reduce allocations when enemy and projectile counts rise.<br/><br/>
     The game was showcased at the Smilegate IndieGo Meetup in May 2026 and also entered in a competition, where it did not receive an award.
   </span>
 </p>
+<div class="text-start mb-4">
+<h3 class="h5 text-secondary mb-3"><span class="lang-ko">핵심 구현 코드</span><span class="lang-en" style="display:none">Selected implementation code</span></h3>
+<figure class="mb-4">
+<img alt="PlayerAttack.cs에서 공격 범위 안의 가장 가까운 적을 찾는 코드" class="img-fluid rounded border" loading="lazy" src="assets/img/portfolio/code/last-caster-auto-attack.png"/>
+<figcaption class="figure-caption mt-2"><span class="lang-ko">공격 범위 안의 적을 거리로 비교해 가장 가까운 대상을 찾고, 공격 코루틴에 넘깁니다.</span><span class="lang-en" style="display:none">Enemies inside the attack radius are compared by distance, and the nearest target is passed to the attack coroutine.</span></figcaption>
+</figure>
+<figure class="mb-3">
+<img alt="SkillManager.cs에서 스킬 목록을 섞어 선택지를 만드는 코드" class="img-fluid rounded border" loading="lazy" src="assets/img/portfolio/code/last-caster-random-skills.png"/>
+<figcaption class="figure-caption mt-2"><span class="lang-ko">전체 스킬 목록을 섞은 뒤 앞에서 세 개를 꺼내, 한 번의 선택 화면에서 같은 스킬이 겹치지 않게 했습니다.</span><span class="lang-en" style="display:none">The full skill list is shuffled and the first three entries are used, preventing duplicate choices on the same level-up screen.</span></figcaption>
+</figure>
+</div>
 <button class="btn btn-primary" data-bs-dismiss="modal">
 <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
