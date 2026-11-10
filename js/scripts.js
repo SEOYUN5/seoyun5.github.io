@@ -54,12 +54,16 @@ window.addEventListener('DOMContentLoaded', event => {
     if (langToggleBtn) {
         langToggleBtn.addEventListener('click', () => {
             const showingKo = langToggleBtn.dataset.lang === 'ko';
+            const nextLang = showingKo ? 'en' : 'ko';
             document.querySelectorAll('.lang-ko')
                 .forEach(el => el.style.display = showingKo ? 'none' : 'inline');
             document.querySelectorAll('.lang-en')
                 .forEach(el => el.style.display = showingKo ? 'inline' : 'none');
-            langToggleBtn.dataset.lang = showingKo ? 'en' : 'ko';
+            langToggleBtn.dataset.lang = nextLang;
             langToggleBtn.textContent = showingKo ? 'KO' : 'EN';
+            langToggleBtn.title = showingKo ? '한국어로 보기' : 'View in English';
+            langToggleBtn.setAttribute('aria-label', langToggleBtn.title);
+            document.documentElement.lang = nextLang;
         });
     }
 

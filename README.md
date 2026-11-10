@@ -1,60 +1,36 @@
-⭐이 포트폴리오는 저의 개발 도전을 기록하고, 다양한 웹 프로젝트를 한눈에 보여줘 동기부여를 받기 위해 제작되었습니다.⭐
+# 김서윤 게임 개발 포트폴리오
 
-GitHub Pages: https://seoyun5.github.io  
-  
-GitHub Repository: https://github.com/SEOYUN5/seoyun5.github.io  
-  
-테마: Start Bootstrap의 Freelancer 테마 (https://startbootstrap.com/theme/freelancer)  
-  
-나의 스킬  
-C, Java, JavaScript, CSS, Git, SQL, Rust: 학습 중    
-  
-프로젝트 (5개)  
-1.개인 포트폴리오 웹사이트 (완료)  
-설명: Freelancer 테마를 활용한 HTML/CSS 기반 포트폴리오 사이트  
-배포: GitHub Pages  
-  
-2.Chat Server (예정)  
-설명: Python 소켓 프로그래밍 기반 채팅 서버 (닉네임, 접속자 목록, 방송 기능)  
-  
-3.Login System (예정)  
-설명: HTML/JavaScript와 LocalStorage를 활용한 사용자 인증 시스템  
-  
-4.Online Shop Backend (예정)  
-설명: Java 또는 Python으로 구현하는 쇼핑몰 백엔드 서버 (상품 조회, 장바구니, 주문 처리)  
-  
-5. Cloud Storage Front-end (예정, 학습 중)  
-설명: HTML/JavaScript로 구현하는 클라우드 업로드 인터페이스  
-  
-Database 연결 (예정)  
-HTML/JavaScript로 구현하는 클라우드 업로드 인터페이스  
-  
-희망 직무:  
-백엔드 개발자: 사용자는 보지 못하더라도, 백엔드는 서비스의 핵심 엔진으로 작동하여 큰 성취감을 줄 것같아 희망합니다.  
-  
-추가 기능 ()  
-1. 언어 토글 (EN/KO)  
-설명: 사이트 내 모든 텍스트를 한국어와 영어로 전환합니다. 상단 내비게이션 바에 위치한 EN/KO 버튼 클릭 시 .lang-ko와 .lang-en 클래스를 가진 요소들의 display 속성을 토글하여 언어를 변경합니다.  
-코드 위치:  
-HTML: 내비게이션 바 섹션 (<nav id="mainNav">)에 위치한 <button id="lang-toggle">  
-JS: window.addEventListener('DOMContentLoaded', ...) 콜백 내부 하단  
-코드 설명: 코드 설명: 클릭 이벤트 발생 시 .lang-ko와 .lang-en 클래스를 가진 요소들을 선택하여 style.display 속성을 전환하도록 구현하였습니다.  
-  
-2. 추천 노래 버튼. 추천 노래 버튼  
-설명: "추천 노래!" 버튼 클릭 시 유튜브 재생 목록을 새 탭으로 엽니다.  
-코드 위치:  
-HTML: About 섹션(<section id="about">) 내 .text-center 영역에 위치한 <a class="btn btn-outline-light btn-lg" ...>  
-코드 설명: <a> 태그에 href="https://www.youtube.com/watch?v=...", target="_blank", rel="noopener", title="Go to Recommended Song" 속성을 설정하여 새 탭으로 안전하게 이동하도록 구현하였습니다.  
-  
-4. 이메일 팝오버
-설명: 이메일 아이콘 클릭 시 말풍선 형태의 팝오버로 이메일 주소를 표시합니다.
-코드 위치:  
-HTML: 푸터 섹션(<footer class="footer text-center">) 내 Social Icons 컬럼 안에 <button id="email-btn" data-bs-toggle="popover" ...>
-JS: 동일한 DOMContentLoaded 콜백 내부, 언어 토글 코드 바로 아래에 위치
-코드 설명: Bootstrap의 Popover 클래스를 호출하여 data-bs- 속성이 설정된 요소를 초기화합니다. 클릭 시 data-bs-content 값으로 지정된 이메일 주소가 팝오버로 나타납니다.
+게임을 직접 만들고 플레이하며 발견한 문제를 고쳐 온 과정을 정리한 포트폴리오입니다.
 
-5. Instagram 링크
-설명: Instagram 아이콘 클릭 시 개인 프로필 페이지로 이동합니다.  
-코드 위치:  
-HTML: index.html 푸터 섹션 Social Icons 컬럼 내 <a href="https://www.instagram.com/..." class="btn btn-outline-light btn-social">  
-코드 설명: <a> 태그의 href 속성에 인스타그램 프로필 URL을 넣어 클릭 시 해당 페이지로 이동하도록 하였습니다.
+- GitHub Pages: https://seoyun5.github.io
+- 사용 테마: [Start Bootstrap Freelancer](https://startbootstrap.com/theme/freelancer)
+- 주요 도구: Unity 6, C#, Git, GitHub
+
+## 프로젝트
+
+1. **라스트 캐스터**
+   Unity 2D와 C#으로 캐릭터 이동·전투, 적 생성과 게임 진행을 나눠 구현했습니다. 아이작의 로그라이크 요소와 뱀서류의 전투 방식을 참고했으며, 2026년 5월 스마일게이트 인디고(IndieGo) 밋업에 전시하고 공모전에도 출품했습니다.
+
+2. **대포 협동 게임**
+   Unity와 C#을 사용해 대포 조작, 발사체와 플레이어 상호작용을 각각 구현하고 있는 협동 게임입니다.
+
+3. **포켓몬 팬게임**
+   Unity 2D, C#, Tilemap과 Animator를 사용했습니다. 조토 지방을 배경으로 메타몽의 커스텀 기술 학습과 피로도 시스템을 구현했습니다.
+
+4. **스프라이트 기반 인디 게임**
+   Unity 6와 C#으로 만든 런앤건 프로젝트입니다. 마우스 위치를 월드 좌표로 바꿔 조준 방향을 계산하고, 적과 총알은 오브젝트 풀로 재사용했습니다.
+
+5. **Unity 2D 테트리스 모방 프로젝트**
+   10×20 보드를 2차원 배열로 관리하고 블록 회전, 월 킥, 줄 제거, 홀드·고스트·하드 드롭과 점수 계산을 구현했습니다. Windows 실행 파일로 빌드했습니다.
+
+6. **마인크래프트 야생 경제 서버**
+   Java 기반 플러그인으로 직업별 성장과 장비 강화, 상점 기능을 구성했습니다. 직접 플레이하며 발견한 장비 성장 문제를 수정하고 가격과 안내 화면도 다듬었습니다.
+
+## 사이트 기능
+
+- 한국어/영어 전환
+- 프로젝트 카드와 상세 모달
+- 이메일 팝오버
+- GitHub 프로필 연결
+
+포트폴리오 카드의 이미지는 각 프로젝트를 설명하기 위해 제작한 콘셉트 이미지입니다.
